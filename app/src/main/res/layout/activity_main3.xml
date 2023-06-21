@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+
+<!--EditText pentru introducere tag dupa care o sa fie cautata imaginea-->
+  <EditText
+      android:id="@+id/baraCautare"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintHeight_percent="0.1"
+      android:hint="Enter Tag"
+      android:textSize="17dp"
+      android:layout_margin="3dp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/rand"/>
+    <!-- rand de butoane-->
+ <LinearLayout
+     android:id="@+id/rand"
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     app:layout_constraintHeight_percent="0.10"
+     android:orientation="horizontal"
+     android:layout_margin="3dp"
+     app:layout_constraintTop_toBottomOf="@+id/baraCautare"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintBottom_toTopOf="@+id/rezultat"
+     >
+     <!--Buton alegere imagine anterioara-->
+   <Button
+       android:id="@+id/previous"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="0.25"
+       android:text="Previous"
+       android:textSize="11dp"
+ />
+     <!--Buton de trimitere catre prima pagina-->
+   <Button
+       android:id="@+id/lista"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:layout_weight="0.25"
+       android:text="Lista taguri"
+       android:textSize="11dp"
+/>
+     <!--Buton de cautare imagine in functie de tag-->
+     <Button
+         android:id="@+id/cauta"
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_weight="0.25"
+         android:text="Cauta"
+         android:textSize="11dp"
+/>
+     <!--Buton afisare imaginea urmatoare-->
+     <Button
+         android:id="@+id/next"
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_weight="0.25"
+         android:text="Next"
+         android:textSize="11dp"
+         />
+
+ </LinearLayout>
+    <!--ImageSwitcher unde sunt afisate imaginile cautate-->
+  <ImageSwitcher
+      android:id="@+id/rezultat"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintHeight_percent="0.75"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/rand"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+<!--ImageSwitcher unde sunt afisate imaginile selectat-->
+
+<ImageSwitcher
+    android:id="@+id/imageSwitcher"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"/>
+<!--AFISEAZA imaginea anterioare-->
+<Button
+    android:id="@+id/previousBtn"
+    android:text="Previous"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:layout_below="@id/imageSwitcher"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+<!--Afiseaza imaginea urmatoare-->
+<Button
+    android:id="@+id/nextBtn"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@id/imageSwitcher"
+    android:text="Next"/>
+<!--Adauga tag nou -->
+<Button
+    android:id="@+id/AddTag"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toLeftOf="@+id/listaTag"
+    android:layout_below="@id/imageSwitcher"
+    android:layout_toRightOf="@+id/previousBtn"
+    android:text="Add TAG"/>
+    <!--Mergi inapoi catre prima pagina-->
+    <Button
+        android:id="@+id/listaTag"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/nextBtn"
+        android:layout_below="@id/imageSwitcher"
+
+        android:text="Lista taguri"/>
+<!--Alege imagini-->
+<Button
+    android:id="@+id/pickImagesBtn"
+    android:text="Pick Images"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"/>
+<!-- Scrie numele tag-ului-->
+<EditText
+    android:id="@+id/EnterTag"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Tag Name"
+    android:textAlignment="center"
+    android:layout_below="@+id/AddTag"/>
+
+
+
+</RelativeLayout>
